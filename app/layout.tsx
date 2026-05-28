@@ -10,7 +10,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Planejador Integral i10",
   description:
-    "Planejador financeiro para o Projeto Integral i10 - Simulador de captacao FUNDEB",
+    "Planejador financeiro para o Projeto Integral i10 — Simulador de captação FUNDEB",
 };
 
 export default function RootLayout({

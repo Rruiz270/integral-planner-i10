@@ -28,13 +28,18 @@ const DEFAULT_FINANCING: FinancingConfig = {
 };
 
 function makeDefaultYearPlans(horizon: number): YearPlan[] {
-  return Array.from({ length: horizon }, (_, i) => ({
-    year: ANO_INICIO_OPS + i,
-    students: 200,
-    costPerStudentMonth: 210,
-    splitI10Pct: 0.7,
-    inflationRate: 0.05,
-  }));
+  return Array.from({ length: horizon }, (_, i) => {
+    let students = 200;
+    if (i === 1) students = 400;
+    else if (i >= 2) students = Math.round(400 * Math.pow(1.4, i - 1));
+    return {
+      year: ANO_INICIO_OPS + i,
+      students,
+      costPerStudentMonth: 210,
+      splitI10Pct: 0.7,
+      inflationRate: 0.05,
+    };
+  });
 }
 
 function createDefaultScenario(horizon: number): Scenario {

@@ -37,7 +37,7 @@ export function StepResults() {
   if (!municipality || results.length === 0) {
     return (
       <div className="card p-6 text-center text-gray-400">
-        Configure o municipio e os cenarios primeiro.
+        Configure o município e os cenários primeiro.
       </div>
     );
   }
@@ -53,10 +53,10 @@ export function StepResults() {
             </div>
             <div>
               <h2 className="text-lg font-bold text-navy">
-                Resultados da Simulacao
+                Resultados da Simulação
               </h2>
               <p className="text-sm text-gray-500">
-                {municipality.nome} — {state.scenarios.length} cenario(s)
+                {municipality.nome} — {state.scenarios.length} cenário(s)
                 analisado(s)
               </p>
             </div>
@@ -88,7 +88,7 @@ export function StepResults() {
         return (
           <div key={scenario.id} className="space-y-4 animate-fade-in-up">
             <h3 className="text-sm font-bold text-navy uppercase tracking-wide px-1">
-              Cenario: {scenario.name}
+              Cenário: {scenario.name}
             </h3>
 
             {/* KPIs */}
@@ -122,7 +122,7 @@ export function StepResults() {
                 <div className="kpi-value text-lg">
                   {formatCurrencyCompact(result.totalInvestmentRequired)}
                 </div>
-                <div className="kpi-label">Capital Necessario</div>
+                <div className="kpi-label">Capital Necessário</div>
               </div>
 
               <div className="kpi-card border-t-2 border-t-navy">
@@ -144,7 +144,7 @@ export function StepResults() {
               </div>
               <div className="card p-5">
                 <h4 className="text-sm font-bold text-navy mb-4">
-                  Projecao de Receita Anual
+                  Projeção de Receita Anual
                 </h4>
                 <RevenueChart data={result.yearProjections} />
               </div>

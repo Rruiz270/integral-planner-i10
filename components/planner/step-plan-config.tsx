@@ -23,7 +23,7 @@ export function StepPlanConfig() {
   if (!municipality || !activeScenario) {
     return (
       <div className="card p-6 text-center text-gray-400">
-        Selecione um municipio primeiro.
+        Selecione um município primeiro.
       </div>
     );
   }
@@ -108,7 +108,7 @@ export function StepPlanConfig() {
 
         <div className="p-6 animate-fade-in-up" key={activeYear}>
           <h4 className="text-sm font-bold text-navy mb-5">
-            Ano {plan.year} — Parametros
+            Ano {plan.year} — Parâmetros
           </h4>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-6">
@@ -128,14 +128,14 @@ export function StepPlanConfig() {
                 className="input-field"
               />
               <span className="text-xs text-gray-400 mt-1.5 block">
-                Max: {totalParcial.toLocaleString("pt-BR")}
+                Máx: {totalParcial.toLocaleString("pt-BR")}
               </span>
             </div>
 
             <div>
               <label className="flex items-center gap-1.5 text-xs font-medium text-gray-500 mb-2">
                 <DollarSign className="w-3.5 h-3.5" />
-                Custo por aluno/mes (R$)
+                Custo por aluno/mês (R$)
               </label>
               <input
                 type="number"
@@ -155,7 +155,7 @@ export function StepPlanConfig() {
             <div>
               <label className="flex items-center gap-1.5 text-xs font-medium text-gray-500 mb-2">
                 <Percent className="w-3.5 h-3.5" />
-                Split i10 / Municipio
+                Split i10 / Município
               </label>
               <div className="flex items-center gap-3">
                 <input
@@ -182,7 +182,7 @@ export function StepPlanConfig() {
             <div>
               <label className="flex items-center gap-1.5 text-xs font-medium text-gray-500 mb-2">
                 <TrendingUp className="w-3.5 h-3.5" />
-                Inflacao anual (%)
+                Inflação anual (%)
               </label>
               <input
                 type="number"
@@ -220,7 +220,7 @@ export function StepPlanConfig() {
             </div>
             <div className="text-center">
               <div className="text-xs text-gray-500 mb-1.5">
-                Parcela municipio (
+                Parcela município (
                 {100 - Math.round(plan.splitI10Pct * 100)}%)
               </div>
               <div className="text-sm font-bold text-green">
@@ -244,7 +244,7 @@ export function StepPlanConfig() {
           onClick={() => dispatch({ type: "SET_STEP", payload: 3 })}
           className="btn-primary flex items-center gap-2"
         >
-          Proximo
+          Próximo
           <ChevronRight className="w-4 h-4" />
         </button>
       </div>

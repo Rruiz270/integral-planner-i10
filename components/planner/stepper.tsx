@@ -12,10 +12,10 @@ import {
 import { cn } from "@/lib/utils";
 
 const STEPS = [
-  { num: 1, label: "Municipio", icon: MapPin },
+  { num: 1, label: "Município", icon: MapPin },
   { num: 2, label: "Plano Anual", icon: Calendar },
   { num: 3, label: "Financiamento", icon: DollarSign },
-  { num: 4, label: "Cenarios", icon: BarChart3 },
+  { num: 4, label: "Cenários", icon: BarChart3 },
   { num: 5, label: "Resultados", icon: FileText },
 ] as const;
 

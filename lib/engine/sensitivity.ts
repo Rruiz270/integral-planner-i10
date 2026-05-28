@@ -31,7 +31,7 @@ const SENSITIVITY_VARIABLES: SensitivityVariable[] = [
   },
   {
     variable: "costPerStudent",
-    label: "Custo/Aluno/Mes",
+    label: "Custo/Aluno/Mês",
     mutate: (s, factor) => {
       const clone = cloneScenario(s);
       clone.yearPlans = clone.yearPlans.map((yp) => ({
@@ -67,7 +67,7 @@ const SENSITIVITY_VARIABLES: SensitivityVariable[] = [
   },
   {
     variable: "inflationRate",
-    label: "Inflacao",
+    label: "Inflação",
     mutate: (s, factor) => {
       const clone = cloneScenario(s);
       clone.yearPlans = clone.yearPlans.map((yp) => ({

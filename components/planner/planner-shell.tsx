@@ -67,7 +67,7 @@ export function PlannerShell() {
       </main>
 
       <footer className="text-center text-xs text-gray-400 py-4 border-t border-gray-100">
-        Instituto i10 — Planejador de Educacao Integral — {new Date().getFullYear()}
+        Instituto i10 — Planejador de Educação Integral — {new Date().getFullYear()}
       </footer>
     </div>
   );

@@ -9,11 +9,11 @@ import {
   Trash2,
   Check,
 } from "lucide-react";
-import { formatCurrency, formatNumber } from "@/lib/utils";
+import { formatNumber } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 
 export function StepScenarios() {
-  const { state, dispatch, activeScenario } = usePlanner();
+  const { state, dispatch } = usePlanner();
   const scenarios = state.scenarios;
   const baseScenario = scenarios.find((s) => s.id === "base");
 
@@ -72,10 +72,10 @@ export function StepScenarios() {
           </div>
           <div>
             <h2 className="text-lg font-bold text-navy">
-              Cenarios de Simulacao
+              Cenários de Simulação
             </h2>
             <p className="text-sm text-gray-500">
-              Compare diferentes cenarios para a tomada de decisao
+              Compare diferentes cenários para a tomada de decisão
             </p>
           </div>
         </div>
@@ -90,7 +90,7 @@ export function StepScenarios() {
             )}
           >
             <Plus className="w-4 h-4" />
-            Cenario Conservador
+            Cenário Conservador
           </button>
           <button
             onClick={addAgressivo}
@@ -101,7 +101,7 @@ export function StepScenarios() {
             )}
           >
             <Plus className="w-4 h-4" />
-            Cenario Agressivo
+            Cenário Agressivo
           </button>
         </div>
 
@@ -137,7 +137,7 @@ export function StepScenarios() {
                       <button
                         onClick={() => removeScenario(scenario.id)}
                         className="text-gray-300 hover:text-red transition-colors cursor-pointer"
-                        title="Remover cenario"
+                        title="Remover cenário"
                       >
                         <Trash2 className="w-4 h-4" />
                       </button>
@@ -186,7 +186,7 @@ export function StepScenarios() {
                     }
                     className="mt-4 w-full text-sm font-semibold text-cyan hover:text-navy transition-colors cursor-pointer py-2 rounded-lg hover:bg-cyan/5"
                   >
-                    Ativar cenario
+                    Ativar cenário
                   </button>
                 )}
               </div>
@@ -207,7 +207,7 @@ export function StepScenarios() {
           onClick={() => dispatch({ type: "SET_STEP", payload: 5 })}
           className="btn-primary flex items-center gap-2"
         >
-          Proximo
+          Próximo
           <ChevronRight className="w-4 h-4" />
         </button>
       </div>

@@ -59,10 +59,10 @@ export function StepMunicipality() {
           </div>
           <div>
             <h2 className="text-lg font-bold text-navy">
-              Selecionar Municipio
+              Selecionar Município
             </h2>
             <p className="text-sm text-gray-500">
-              Busque entre os 645 municipios do estado de Sao Paulo
+              Busque entre os 645 municípios do estado de São Paulo
             </p>
           </div>
         </div>
@@ -76,7 +76,7 @@ export function StepMunicipality() {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Digite o nome do municipio..."
+            placeholder="Digite o nome do município..."
             className="input-field pl-10"
             autoFocus
           />
@@ -95,7 +95,7 @@ export function StepMunicipality() {
                       {m.nome}
                     </span>
                     <span className="text-xs text-gray-400 ml-2">
-                      {formatNumber(m.totalMatriculas)} matriculas
+                      {formatNumber(m.totalMatriculas)} matrículas
                     </span>
                   </div>
                   <ChevronRight className="w-4 h-4 text-gray-300 group-hover:text-cyan group-hover:translate-x-0.5 transition-all" />
@@ -107,7 +107,7 @@ export function StepMunicipality() {
 
         {query.length >= 2 && !loading && results.length === 0 && (
           <p className="text-sm text-gray-400 mt-3">
-            Nenhum municipio encontrado.
+            Nenhum município encontrado.
           </p>
         )}
       </div>
@@ -124,7 +124,7 @@ export function StepMunicipality() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             <KpiCard
               icon={Users}
-              label="Total Matriculas"
+              label="Total Matrículas"
               value={formatNumber(selected.totalMatriculas)}
             />
             <KpiCard
@@ -139,7 +139,7 @@ export function StepMunicipality() {
             />
             <KpiCard
               icon={Users}
-              label="EF Parcial Conversivel"
+              label="EF Parcial Conversível"
               value={formatNumber(selected.efAiParcial + selected.efAfParcial)}
               sub={`AI: ${formatNumber(selected.efAiParcial)} / AF: ${formatNumber(selected.efAfParcial)}`}
             />
@@ -161,7 +161,7 @@ export function StepMunicipality() {
               onClick={() => dispatch({ type: "SET_STEP", payload: 2 })}
               className="btn-primary flex items-center gap-2"
             >
-              Proximo
+              Próximo
               <ChevronRight className="w-4 h-4" />
             </button>
           </div>

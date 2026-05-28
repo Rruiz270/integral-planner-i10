@@ -9,12 +9,12 @@ import {
   Building2,
   Clock,
 } from "lucide-react";
-import { MESES_GAP, MES_INICIO_OPS, ANO_INICIO_OPS } from "@/lib/constants";
+import { MESES_GAP, ANO_INICIO_OPS } from "@/lib/constants";
 
 const CAPITAL_SOURCES = [
   "Investimento privado",
-  "Emprestimo bancario",
-  "Antecipacao municipal",
+  "Empréstimo bancário",
+  "Antecipação municipal",
 ];
 
 const GAP_MONTHS = [
@@ -37,7 +37,7 @@ export function StepFinancing() {
   if (!activeScenario) {
     return (
       <div className="card p-6 text-center text-gray-400">
-        Nenhum cenario ativo.
+        Nenhum cenário ativo.
       </div>
     );
   }
@@ -63,7 +63,7 @@ export function StepFinancing() {
           </div>
           <div>
             <h2 className="text-lg font-bold text-navy">
-              Parametros de Financiamento
+              Parâmetros de Financiamento
             </h2>
             <p className="text-sm text-gray-500">
               Configure as taxas e a fonte de capital para o gap operacional
@@ -92,14 +92,14 @@ export function StepFinancing() {
               className="input-field"
             />
             <span className="text-xs text-gray-400 mt-1.5 block">
-              Custo do capital durante o periodo de gap
+              Custo do capital durante o período de gap
             </span>
           </div>
 
           <div>
             <label className="flex items-center gap-1.5 text-sm font-medium text-gray-600 mb-2">
               <Percent className="w-4 h-4" />
-              Taxa de desconto - NPV (% a.a.)
+              Taxa de desconto — NPV (% a.a.)
             </label>
             <input
               type="number"
@@ -113,7 +113,7 @@ export function StepFinancing() {
               className="input-field"
             />
             <span className="text-xs text-gray-400 mt-1.5 block">
-              Para calculo do valor presente liquido
+              Para cálculo do valor presente líquido
             </span>
           </div>
 
@@ -147,10 +147,10 @@ export function StepFinancing() {
           </div>
           <div>
             <h2 className="text-lg font-bold text-navy">
-              Periodo de Gap Operacional
+              Período de Gap Operacional
             </h2>
             <p className="text-sm text-gray-500">
-              {MESES_GAP} meses entre o inicio das operacoes e o repasse FUNDEB
+              {MESES_GAP} meses entre o início das operações e o repasse FUNDEB
             </p>
           </div>
         </div>
@@ -158,7 +158,7 @@ export function StepFinancing() {
         <div className="space-y-4">
           <div className="flex items-center gap-3 text-sm text-gray-600">
             <span className="font-medium bg-red/10 text-red px-3 py-1 rounded-full text-xs">
-              Inicio: Fev/{ANO_INICIO_OPS}
+              Início: Fev/{ANO_INICIO_OPS}
             </span>
             <div className="flex-1 h-px bg-gray-200" />
             <span className="font-medium bg-green/10 text-green px-3 py-1 rounded-full text-xs">
@@ -185,11 +185,11 @@ export function StepFinancing() {
           <div className="flex items-center gap-4 text-xs text-gray-400">
             <div className="flex items-center gap-1.5">
               <div className="w-3 h-3 rounded bg-red/15 border border-red/25" />
-              Periodo sem receita (gap)
+              Período sem receita (gap)
             </div>
             <div className="flex items-center gap-1.5">
               <div className="w-3 h-3 rounded bg-green/15 border border-green/25" />
-              Inicio dos repasses FUNDEB
+              Início dos repasses FUNDEB
             </div>
           </div>
         </div>
@@ -208,7 +208,7 @@ export function StepFinancing() {
           onClick={() => dispatch({ type: "SET_STEP", payload: 4 })}
           className="btn-primary flex items-center gap-2"
         >
-          Proximo
+          Próximo
           <ChevronRight className="w-4 h-4" />
         </button>
       </div>
