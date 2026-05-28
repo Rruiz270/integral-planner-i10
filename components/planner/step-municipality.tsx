@@ -77,7 +77,7 @@ export function StepMunicipality() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Digite o nome do município..."
-            className="input-field pl-10"
+            className="input-field !pl-11"
             autoFocus
           />
         </div>
